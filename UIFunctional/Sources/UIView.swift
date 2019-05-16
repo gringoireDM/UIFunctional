@@ -34,7 +34,7 @@ public extension UIView {
     }
     
     @discardableResult
-    func setupBorder(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor?) -> Self {
+    func setLayerBorder(cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor?) -> Self {
         layer.setCorner(cornerRadius)
             .setBorder(width: borderWidth)
             .setBorder(color: borderColor)
@@ -44,7 +44,7 @@ public extension UIView {
     }
     
     @discardableResult @available(iOS 11.0, *)
-    func setMaskedCorners(_ maskedCorners: CACornerMask) -> Self {
+    func setLayerMaskedCorners(_ maskedCorners: CACornerMask) -> Self {
         layer.maskedCorners = maskedCorners
         return self
     }
